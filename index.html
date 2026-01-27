@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" x-data>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ijebu Muslim Business Summit 2.0</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Alpine -->
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- GSAP -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+
+  <!-- CountUp -->
+  <script src="./countUp.min.js"></script>
+
+  <style>
+    body { scroll-behavior: smooth; }
+    .glass {
+      backdrop-filter: blur(14px);
+      background: rgba(255,255,255,.6);
+    }
+    .neo {
+      box-shadow: 8px 8px 16px #d1d1d1,
+                  -8px -8px 16px #ffffff;
+    }
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee-x 20s linear infinite;
+}
+
+.marquee-content-reverse {
+  animation: marquee-x 20s linear infinite reverse;
+}
+
+@keyframes marquee-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-container {
+  display: flex;
+}
+
+.marquee-container > * {
+  flex-shrink: 0;
+  margin-right: 64px;
+}
+
+.marquee-container > *:last-child {
+  margin-right: 0;
+}
+
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 via-white to-yellow-50 text-gray-800 overflow-x-hidden">
+
+<!-- ================= LOADER ================= -->
+<div id="loader" class="fixed inset-0 bg-white z-[100] flex items-center justify-center">
+  <div class="flex gap-3">
+    <div class="w-6 h-6 bg-red-500 rounded"></div>
+    <div class="w-6 h-6 bg-green-500 rounded"></div>
+    <div class="w-6 h-6 bg-yellow-400 rounded"></div>
+    <div class="w-6 h-6 bg-blue-500 rounded"></div>
+  </div>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] glass neo rounded-full px-8 py-4 z-50 flex justify-between items-center">
+  <h1 class="font-bold text-lg text-green-700">IMBS 2.0</h1>
+  <div class="hidden md:flex gap-6 font-medium">
+    <a href="#about">About</a>
+    <a href="#speakers">Speakers</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a href="https://pay.sgm.ng/imbs" target="_blank" class="bg-red-500 text-white px-5 py-2 rounded-full hover:scale-105 transition">
+    Register
+  </a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="min-h-screen flex items-center justify-center relative px-6">
+  <div class="text-center max-w-4xl">
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-6">
+      Ethics. Enterprise.<br>
+      <span class="text-green-600">Economic Resilience</span>
+    </h1>
+
+    <p class="text-xl mb-6">
+      Saturday, 9th May 2026 • 9:00am<br>
+      <span class="font-semibold">Ijebu, Ogun State</span>
+    </p>
+
+    <a id="cta" href="https://pay.sgm.ng/imbs" target="_blank"
+      class="relative px-10 py-4 bg-gradient-to-r from-red-500 to-yellow-400 text-white rounded-full text-lg font-bold">
+      Register Now
+    </a>
+  </div>
+</section>
+
+<!-- ================= SPONSORS ================= -->
+<section class="py-20 bg-white">
+  <h2 class="text-center text-3xl font-bold mb-10">Sponsors & Partners</h2>
+
+  <div class="overflow-hidden whitespace-nowrap">
+    <div class="animate-marquee inline-flex gap-16 marquee-container">
+      <img src="./img/sponsor (1).jpg" class="marquee-content" />
+      <!-- <img src="./img/sponsor (1).png" class="marquee-content" /> -->
+      <img src="./img/sponsor (2).png" class="marquee-content" />
+      <img src="./img/sponsor (3).png" class="marquee-content" />
+      <img src="./img/sponsor (4).png" class="marquee-content" />
+      <img src="./img/sponsor (5).png" class="marquee-content" />
+    </div>
+  </div>
+
+  <div class="overflow-hidden whitespace-nowrap mt-5">
+    <div class="animate-marquee-reverse inline-flex gap-16 marquee-container">
+      <img src="./img/sponsor (1).jpg" class="marquee-content-reverse" />
+      <!-- <img src="./img/sponsor (1).png" class="marquee-content-reverse" /> -->
+      <img src="./img/sponsor (2).png" class="marquee-content-reverse" />
+      <img src="./img/sponsor (3).png" class="marquee-content-reverse" />
+      <img src="./img/sponsor (4).png" class="marquee-content-reverse" />
+      <img src="./img/sponsor (5).png" class="marquee-content-reverse" />
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="py-24 bg-gradient-to-r from-green-50 to-blue-50">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 px-6">
+    <div>
+      <h2 class="text-4xl font-bold mb-4">About the Summit</h2>
+      <p class="mb-6">
+        The Ijebu Muslim Business Summit (IMBS) 2.0 is a premier gathering designed to inspire, equip, and connect Muslim entrepreneurs, professionals, and business leaders. Rooted in Islamic ethics and forward-thinking enterprise principles, the Summit provides practical insights for building resilient and sustainable businesses.
+      </p>
+      <p class="mb-6">
+        The 2025 edition successfully brought together business leaders, scholars, youth innovators, cooperative societies, and professionals who exchanged insights on business growth, digital transformation, and ethical enterprise development. The Summit recorded commendable achievements such as increased awareness of halal finance, stronger interbusiness connections, youth interest in entrepreneurship, and the establishment of preliminary working groups for future collaborations. Feedback from participants highlighted the need for continuity, deeper technical sessions, structured mentorship, and stronger engagement of investors and financial institutions. 
+      </p>
+      <a href="https://pay.sgm.ng/imbs" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-full">Secure Your Seat</a>
+    </div>
+    <div>
+      <img src="img/imbs.jpg" alt="IMBS Summit" class="rounded-xl object-cover ">
+    </div>
+  </div>
+</section>
+
+<!-- ================= GAINS ================= -->
+<section class="py-24">
+  <h2 class="text-center text-4xl font-bold mb-16">What to Expect</h2>
+  <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto px-6">
+    <div class="glass neo rounded-2xl p-6 text-center">
+      <div class="text-4xl mb-4">🎤</div>
+      <h3 class="font-bold text-xl mb-2">Inspiring Keynotes</h3>
+      <p class="text-sm">Inspiring keynote and expert sessions</p>
+    </div>
+    <div class="glass neo rounded-2xl p-6 text-center">
+      <div class="text-4xl mb-4">💼</div>
+      <h3 class="font-bold text-xl mb-2">Business Discussions</h3>
+      <p class="text-sm">Practical business and enterprise discussions</p>
+    </div>
+    <div class="glass neo rounded-2xl p-6 text-center">
+      <div class="text-4xl mb-4">🤝</div>
+      <h3 class="font-bold text-xl mb-2">Networking</h3>
+      <p class="text-sm">Networking with Muslim business leaders</p>
+    </div>
+    <div class="glass neo rounded-2xl p-6 text-center">
+      <div class="text-4xl mb-4">🚀</div>
+      <h3 class="font-bold text-xl mb-2">Growth Opportunities</h3>
+      <p class="text-sm">Opportunities for collaboration and growth</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="py-24 bg-white">
+  <div class="grid md:grid-cols-4 gap-8 text-center max-w-6xl mx-auto">
+    <div><h3 id="n1" class="text-5xl font-bold"></h3><p>Participants</p></div>
+    <div><h3 id="n2" class="text-5xl font-bold"></h3><p>Speakers</p></div>
+    <div><h3 id="n3" class="text-5xl font-bold"></h3><p>Businesses</p></div>
+    <div><h3 id="n4" class="text-5xl font-bold"></h3><p>Collaborations</p></div>
+  </div>
+</section>
+
+<!-- ================= SPEAKERS ================= -->
+<section id="speakers" class="py-24 bg-gradient-to-br from-yellow-50 to-red-50">
+  <h2 class="text-center text-4xl font-bold mb-16">Why Attend</h2>
+  <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto px-6">
+    <div class="glass neo rounded-xl p-6 text-center hover:scale-105 transition">
+      <div class="text-4xl mb-4">📚</div>
+      <h4 class="font-bold text-lg mb-2">Ethical Business Strategies</h4>
+      <p class="text-sm">Learn ethical business strategies</p>
+    </div>
+    <div class="glass neo rounded-xl p-6 text-center hover:scale-105 transition">
+      <div class="text-4xl mb-4">💪</div>
+      <h4 class="font-bold text-lg mb-2">Economic Resilience</h4>
+      <p class="text-sm">Gain insights on economic resilience</p>
+    </div>
+    <div class="glass neo rounded-xl p-6 text-center hover:scale-105 transition">
+      <div class="text-4xl mb-4">🤝</div>
+      <h4 class="font-bold text-lg mb-2">Professional Network</h4>
+      <p class="text-sm">Connect with like-minded professionals</p>
+    </div>
+    <div class="glass neo rounded-xl p-6 text-center hover:scale-105 transition">
+      <div class="text-4xl mb-4">🕌</div>
+      <h4 class="font-bold text-lg mb-2">Islamic Values</h4>
+      <p class="text-sm">Build businesses aligned with Islamic values</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery" class="py-20 overflow-x-hidden">
+  <h2 class="text-center text-3xl font-bold mb-8">Gallery</h2>
+  <div id="galleryRow" class="columns-1 md:columns-2 lg:columns-3 gap-6 px-6 max-w-6xl mx-auto">
+  </div>
+
+    
+</section>
+
+<!-- ================= COUNTDOWN ================= -->
+<section class="py-24 bg-red-600 text-white text-center">
+  <h2 class="text-4xl font-bold mb-6">Countdown to IMBS 2.0</h2>
+  <div id="countdown" class="text-3xl mb-6"></div>
+  <a href="https://pay.sgm.ng/imbs" target="_blank" class="bg-white text-red-600 px-8 py-3 rounded-full font-bold">
+    Hurry! Register Now
+  </a>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq" class="py-24 max-w-4xl mx-auto px-6">
+  <h2 class="text-4xl font-bold mb-8">FAQs</h2>
+  <details class="mb-4 glass p-4 rounded">
+    <summary class="font-bold cursor-pointer">Who should attend IMBS 2.0?</summary>
+    <p class="mt-3 text-sm">IMBS 2.0 is designed for Muslim entrepreneurs, professionals, startup founders, business owners, students, investors, and anyone interested in ethical, non-interest and halal-based enterprise.</p>
+  </details>
+  <details class="mb-4 glass p-4 rounded">
+    <summary class="font-bold cursor-pointer">Do I need to own a business before attending?</summary>
+    <p class="mt-3 text-sm">No. Whether you are already running a business, planning to start one, or simply interested in Islamic finance and ethical enterprise, IMBS 2.0 will provide valuable insights and opportunities for you.</p>
+  </details>
+  <details class="mb-4 glass p-4 rounded">
+    <summary class="font-bold cursor-pointer">What makes IMBS 2.0 different from other business events?</summary>
+    <p class="mt-3 text-sm">IMBS 2.0 is built on Islamic principles of fairness, trust, and social responsibility. It combines business strategy, faith-based ethics, and real-world enterprise solutions in a way that few business conferences offer.</p>
+  </details>
+  <details class="mb-4 glass p-4 rounded">
+    <summary class="font-bold cursor-pointer">Will there be networking opportunities?</summary>
+    <p class="mt-3 text-sm">Yes. IMBS 2.0 provides structured and informal networking sessions where participants can connect with Muslim business leaders, investors, professionals, and potential partners.</p>
+  </details>
+  <details class="mb-4 glass p-4 rounded">
+    <summary class="font-bold cursor-pointer">How do I register for IMBS 2.0?</summary>
+    <p class="mt-3 text-sm">Registration will be done online. A registration link will be shared through official IMBS platforms and social media channels once it opens. Seats are limited and early registration is strongly encouraged.</p>
+  </details>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="py-16 bg-gray-900 text-white text-center">
+  <p>Write to us • Follow us</p>
+  <div class="flex justify-center gap-6 mt-4">
+    <span>FB</span><span>X</span><span>IG</span>
+  </div>
+</footer>
+  <style>
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+
+<script>
+  gsap.from("#loader div div",{scale:0, stagger:.1});
+  gsap.to("#loader",{opacity:0, delay:1.5, onComplete:()=>loader.remove()});
+
+  function countUp(id, target, duration = 8000) {
+    const element = document.getElementById(id);
+    const start = 0;
+    const startTime = Date.now();
+    
+    function animate() {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const current = Math.floor(start + (target - start) * progress);
+      element.innerText = current;
+      
+      if (progress < 1) requestAnimationFrame(animate);
+    }
+    animate();
+  }
+
+  countUp('n1', 1000);
+  countUp('n2', 25);
+  countUp('n3', 50);
+  countUp('n4', 100);
+
+  fetch("https://galleria.sgm.ng/9irU5kxx8qn4ri4W7")
+    .then(r=>r.json())
+    .then(d=>{
+      d.slice(2).forEach((img, index) => {
+        setTimeout(() => {
+          const imgEl = document.createElement('img');
+          imgEl.src = img;
+          imgEl.className = 'h-48 rounded-xl object-cover hover:scale-110 transition-transform duration-500 cursor-pointer';
+          imgEl.onclick = () => {
+            const modal = document.getElementById('galleryModal');
+            document.getElementById('modalImg').src = img;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+          };
+          document.getElementById("galleryRow").appendChild(imgEl);
+        }, index * 200);
+      });
+
+      const galleryModal = document.createElement('div');
+      galleryModal.id = 'galleryModal';
+      galleryModal.className = 'fixed inset-0 bg-black bg-opacity-75 z-[200] hidden items-center justify-center p-4';
+      galleryModal.innerHTML = '<img id="modalImg" class="max-w-4xl max-h-[90vh] object-contain rounded-xl" />';
+      galleryModal.onclick = () => galleryModal.classList.add('hidden');
+      document.body.appendChild(galleryModal);
+
+      const style = document.createElement('style');
+      style.textContent = `
+        #galleryRow img {
+          break-inside: avoid;
+          margin-bottom: 1.5rem;
+          animation: popIn 0.5s ease-out;
+        }
+      `;
+      document.head.appendChild(style);
+    });
+
+  setInterval(()=> {
+    const eventDate = new Date("2026-05-09").getTime();
+    const now = new Date().getTime();
+    const diff = eventDate - now;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+      `<b>${days}</b> <small> Days </small> <b>${hours}</b> <small> Hours </small> <b>${minutes}</b> <small> Minutes </small> <b>${seconds}</b> <small> Seconds </small>`;
+  }, 1000);
+</script>
+
+</body>
+</html>
