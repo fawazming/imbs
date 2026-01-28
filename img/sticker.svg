@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80mm" height="50mm" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="500" fill="#ffffff" rx="25" ry="25"/>
+
+  <!-- Border -->
+  <rect x="15" y="15" width="770" height="470" fill="none" stroke="#0f5132" stroke-width="6" rx="20" ry="20"/>
+
+  <!-- Header -->
+  <text x="400" y="80"
+        text-anchor="middle"
+        font-size="38"
+        font-family="Georgia, serif"
+        fill="#0f5132"
+        font-weight="bold">
+    THANK YOU
+  </text>
+
+  <!-- Main Text -->
+  <text x="400" y="145"
+        text-anchor="middle"
+        font-size="26"
+        font-family="Arial, sans-serif"
+        fill="#000000">
+    For coming to the Turbaning Ceremony of
+  </text>
+
+  <!-- Name -->
+  <text x="400" y="195"
+        text-anchor="middle"
+        font-size="30"
+        font-family="Georgia, serif"
+        fill="#000000"
+        font-weight="bold">
+    Imam Abduljaleel Zakariyyah
+  </text>
+
+  <!-- Title -->
+  <text x="400" y="235"
+        text-anchor="middle"
+        font-size="24"
+        font-family="Arial, sans-serif"
+        fill="#000000">
+    Chief Imam of
+  </text>
+
+  <text x="400" y="270"
+        text-anchor="middle"
+        font-size="26"
+        font-family="Arial, sans-serif"
+        fill="#000000"
+        font-weight="bold">
+    TAWAKALT HARMONY MUSLIM CENTRAL MOSQUE
+  </text>
+
+  <!-- Date -->
+  <text x="400" y="335"
+        text-anchor="middle"
+        font-size="22"
+        font-family="Arial, sans-serif"
+        fill="#000000">
+    Today, 28th of January, 2026
+  </text>
+
+  <!-- Closing -->
+  <text x="400" y="395"
+        text-anchor="middle"
+        font-size="28"
+        font-family="Georgia, serif"
+        fill="#0f5132"
+        font-weight="bold">
+    Jazakumullahu Khairan
+  </text>
+</svg>
