@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" x-data>
+<html lang="en" x-data="{ showRegistration: false }">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -27,16 +27,16 @@
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 
 
-  <style>
-    body { scroll-behavior: smooth; }
-    .glass {
-      backdrop-filter: blur(14px);
-      background: rgba(255,255,255,.6);
-    }
-    .neo {
-      box-shadow: 8px 8px 16px #d1d1d1,
-                  -8px -8px 16px #ffffff;
-    }
+<style>
+  body { scroll-behavior: smooth; }
+  .glass {
+    backdrop-filter: blur(14px);
+    background: rgba(255,255,255,.6);
+  }
+  .neo {
+    box-shadow: 8px 8px 16px #d1d1d1,
+                -8px -8px 16px #ffffff;
+  }
 .marquee-container {
   overflow: hidden;
   white-space: nowrap;
@@ -97,10 +97,25 @@
     <a href="#gallery">Gallery</a>
     <a href="#faq">FAQ</a>
   </div>
-  <a href="https://pay.sgm.ng/imbs" target="_blank" class="bg-red-500 text-white px-5 py-2 rounded-full hover:scale-105 transition">
+  <button @click="showRegistration = true; window.scrollTo(0,0)" class="bg-red-500 text-white px-5 py-2 rounded-full hover:scale-105 transition">
     Register
-  </a>
+  </button>
 </nav>
+
+<!-- ================= REGISTRATION IFRAME (SPA MODE) ================= -->
+<template x-if="showRegistration">
+  <section class="pt-32 pb-20 min-h-screen bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <button @click="showRegistration = false" class="mb-6 flex items-center gap-2 text-gray-600 hover:text-red-500 transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+        Back to Home
+      </button>
+      <iframe src="https://pay.sgm.ng/embed/imbs" class="w-full h-[800px] border-0 rounded-2xl shadow-2xl" allow="payment"></iframe>
+    </div>
+  </section>
+</template>
+
+<div x-show="!showRegistration">
 
 <!-- ================= HERO ================= -->
 <section class="min-h-screen flex items-center justify-center relative px-6">
@@ -115,10 +130,10 @@
       <span class="font-semibold">Ijebu, Ogun State</span>
     </p>
 
-    <a id="cta" href="https://pay.sgm.ng/imbs" target="_blank"
+    <button @click="showRegistration = true; window.scrollTo(0,0)"
       class="relative px-10 py-4 bg-gradient-to-r from-red-500 to-yellow-400 text-white rounded-full text-lg font-bold">
       Register Now
-    </a>
+    </button>
   </div>
 </section>
 
@@ -267,7 +282,7 @@
       <p class="mb-6">
         The 2025 edition successfully brought together business leaders, scholars, youth innovators, cooperative societies, and professionals who exchanged insights on business growth, digital transformation, and ethical enterprise development. The Summit recorded commendable achievements such as increased awareness of halal finance, stronger interbusiness connections, youth interest in entrepreneurship, and the establishment of preliminary working groups for future collaborations. Feedback from participants highlighted the need for continuity, deeper technical sessions, structured mentorship, and stronger engagement of investors and financial institutions. 
       </p>
-      <a href="https://pay.sgm.ng/imbs" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-full">Secure Your Seat</a>
+      <button @click="showRegistration = true; window.scrollTo(0,0)" class="bg-green-600 text-white px-6 py-3 rounded-full">Secure Your Seat</button>
     </div>
     <div>
       <img src="img/imbs.jpg" alt="IMBS Summit" class="rounded-xl object-cover ">
@@ -352,9 +367,9 @@
 <section class="py-24 bg-red-600 text-white text-center">
   <h2 class="text-4xl font-bold mb-6">Countdown to IMBS 2.0</h2>
   <div id="countdown" class="text-3xl mb-6"></div>
-  <a href="https://pay.sgm.ng/imbs" target="_blank" class="bg-white text-red-600 px-8 py-3 rounded-full font-bold">
+  <button @click="showRegistration = true; window.scrollTo(0,0)" class="bg-white text-red-600 px-8 py-3 rounded-full font-bold">
     Hurry! Register Now
-  </a>
+  </button>
 </section>
 
 <!-- ================= TESTIMONIALS ================= -->
@@ -479,6 +494,7 @@
     </div>
   </div>
 </footer>
+</div>
   <style>
     @keyframes popIn {
       from { opacity: 0; transform: scale(0.9); }
